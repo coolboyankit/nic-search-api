@@ -44,3 +44,5 @@ def search():
 
     return jsonify({"query": query, "results": results})
 
+port = int(os.environ.get('PORT', 10000))  # Use Render-assigned port
+    app.run(host='0.0.0.0', port=port)
